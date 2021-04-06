@@ -1,13 +1,73 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+
+.Header {
+  background-color: #282c34;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.Header form {
+  display: flex;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.Header button {
+  font-size: 1,5em;
+  
 }
+
+.ParticipantList {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1em;
+  overflow-y: scroll;
+}
+
+.ParticipantList::after {
+  content: "";
+  display: block;
+  min-height: 1em;
+}
+
+.Participant {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em 1em;
+  margin: 0.2em 0.5em;
+  border: 3px solid #2f5d62;
+  border-radius: 1em;
+}
+
+.Participant button:last-child {
+  border: 1px solid #2f5d62;
+  padding: 0.2em;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  flex-basis: 5em;
+}
+
+.Participant button:last-child:hover {
+  background-color: #2f5d62;
+  color: white;
+}
+
+.Participant__delete {
+  color: red;
+  flex-grow: 0;
+  cursor: pointer;
+}
+
+.Participant--present {
+  color: #2f5d62;
+}
+
+.Participant--absent {
+  color: #ffb037;
+}
+
+
+
