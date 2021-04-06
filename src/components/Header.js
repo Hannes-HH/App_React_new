@@ -14,7 +14,7 @@ function Header({ onAddParticipant }) {
           id="participant"
           name="participant"
           type="text"
-          placeholder="Add participant..."
+          placeholder="Add to do..."
           required
         />
         <button type="submit"> Add </button>
